@@ -132,8 +132,11 @@
   /* VISUALS */
   .visual-block{margin-bottom:56px;}
   .visual-block img{
-    width:100%;border-radius:10px;border:1px solid var(--line);
-    display:block;margin-bottom:18px;background:var(--bg-warm);
+    max-width:100%;width:auto;height:auto;
+    max-height:420px;
+    border-radius:10px;border:1px solid var(--line);
+    display:block;margin:0 auto 18px auto;background:var(--bg-warm);
+    object-fit:contain;
   }
   .visual-block h4{font-size:17px;margin-bottom:8px;}
   .visual-block p{font-size:14.5px;color:var(--ink-soft);max-width:680px;}
