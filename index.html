@@ -132,14 +132,14 @@
   /* VISUALS */
   .visual-block{margin-bottom:56px;}
   .visual-block img{
-    max-width:100%;width:auto;height:auto;
-    max-height:420px;
+    max-width:100%;height:auto;max-height:380px;
     border-radius:10px;border:1px solid var(--line);
     display:block;margin:0 auto 18px auto;background:var(--bg-warm);
-    object-fit:contain;
   }
   .visual-block h4{font-size:17px;margin-bottom:8px;}
   .visual-block p{font-size:14.5px;color:var(--ink-soft);max-width:680px;}
+  .visual-row{display:flex;gap:24px;margin-bottom:56px;flex-wrap:wrap;}
+  .visual-row .visual-block{flex:1;min-width:280px;margin-bottom:0;}
 
   /* STACK */
   .stack-row{display:flex;flex-wrap:wrap;gap:10px;}
@@ -291,16 +291,18 @@
     <h2>The Power BI dashboard</h2>
     <p class="lede">Built on the cleaned dataset, mirroring the same five questions answered in SQL — but interactive.</p>
 
-    <div class="visual-block">
-      <img src="images/dashboard-full.png" alt="Full food delivery Power BI dashboard">
-      <h4>Full Dashboard — Food Delivery Business Analysis</h4>
-      <p>Top-line KPIs (orders, revenue, delivery time, refund rate), two slicers (area, order type), and six visuals covering distance, discounting, refunds, time-of-day demand, and rating quality — all on one page.</p>
-    </div>
+    <div class="visual-row">
+      <div class="visual-block">
+        <img src="images/distance-vs-delivery.png" alt="Distance bucket vs delivery time and order value">
+        <h4>Distance vs. Delivery Time & Order Value</h4>
+        <p>As distance increases, delivery time rises and so does order value.</p>
+      </div>
 
-    <div class="visual-block">
-      <img src="images/distance-vs-delivery.png" alt="Distance bucket vs delivery time and order value">
-      <h4>Distance vs. Delivery Time & Order Value</h4>
-      <p>As distance increases, delivery time rises and so does order value — setting up the core tension explored across this dashboard.</p>
+      <div class="visual-block">
+        <img src="images/refund-daynight.png" alt="Refund rate by order type and day vs night orders by area">
+        <h4>Refund Rate · Day vs. Night by Area</h4>
+        <p>First-time orders carry the highest refund rate. Every area orders more by day than night.</p>
+      </div>
     </div>
 
     <div class="visual-block">
